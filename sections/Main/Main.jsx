@@ -1,5 +1,3 @@
-// import Image from "../../resources/video.png";
-
 import {
   StyledMainSectionContainer,
   StyledTitleSection,
@@ -7,11 +5,13 @@ import {
   StyledTextContainer,
   StyledInnerContainer,
   StyledImageSideContainer,
+  StyledCardSideContainer,
 } from "./elements";
 
 import Image from "next/image";
+import { Card } from "../../collections/Card/Card";
 
-export const Main = ({ title, subTitle, image }) => {
+export const Main = ({ title, subTitle, image, cards }) => {
   return (
     <StyledMainSectionContainer>
       <StyledTextContainer>
@@ -21,12 +21,23 @@ export const Main = ({ title, subTitle, image }) => {
       <StyledInnerContainer>
         <StyledImageSideContainer>
           <Image
-            layout="fill"
+            layout="fixed"
             src={image.src}
-            alt={image.alt}
-            width={image.width}
+            alt="video picture"
+            width={350}
+            height={600}
           />
         </StyledImageSideContainer>
+        <StyledCardSideContainer>
+          {cards.map((card) => (
+            <Card
+              key={card.id}
+              title={card.title}
+              description={card.description}
+              icon={card.icon.src}
+            />
+          ))}
+        </StyledCardSideContainer>
       </StyledInnerContainer>
     </StyledMainSectionContainer>
   );

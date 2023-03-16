@@ -4,6 +4,7 @@ import { SectionHeading, SectionSubheading } from "~/components";
 import { InnerContainer } from "../../components/Containers/MainSectionContainers/InnerContainer";
 import { MainSectionContainer } from "../../components/Containers/MainSectionContainers/MainSectionContainer";
 import { ImageSideContainer } from "../../components/Containers/MainSectionContainers/ImageSideContainer";
+import { CardSideContainer } from "../../components/Containers/MainSectionContainers/CardSideContainer";
 
 //prettier-ignore
 export const StyledMainSectionContainer = styled((props) => <MainSectionContainer {...props} />)`
@@ -30,3 +31,5 @@ line-height: 0;
 export const StyledImageSideContainer = styled((props) => <ImageSideContainer {...props} />)`
 line-height: 0;
 `
+//prettier-ignore
+export const StyledCardSideContainer = styled((props) => <CardSideContainer {...props} />)``;

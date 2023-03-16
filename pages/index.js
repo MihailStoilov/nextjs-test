@@ -12,11 +12,34 @@ const mainProps = {
   title: "Managed agency selection",
   subTitle: "Stengthen your onboarding proccess",
   image: {
-    src: "/resources/video.png",
+    src: "/img/video.png",
     alt: "video image",
-    width: 100,
-    height: 100
+    width: 1000,
+    height: 1680
   },
+  cards: [
+    {
+      id: "1",
+      title: "Brief",
+      description:
+        "Complete <span>brief writing or simple guidance</span> on what to include, we've got you covered.",
+      icon: { src: "/img/1icon.png" },
+    },
+    {
+      id: "2",
+      title: "Search",
+      description:
+        "In-depth agency search covering; <span>criteria matching</span>, door knocking and due-dilligence vetting.",
+      icon: { src: "/img/2icon.png" },
+    },
+    {
+      id: "3",
+      title: "Pitch",
+      description:
+        "Comprehensive <span>pitch management</span>, including comms, diary management and pitch hosting.",
+      icon: { src: "/img/3icon.png" },
+    },
+  ],
 }
 
 export default function Home() {
